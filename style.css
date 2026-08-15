@@ -77,6 +77,12 @@ body.menu-open {
 }
 
 
+h1, h2 {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+
 img {
     display: block;
     width: 100%;
