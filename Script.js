@@ -18,9 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         menuButton.addEventListener("click", () => {
 
-            mobileMenu.classList.toggle("active");
+            const isOpen = mobileMenu.classList.toggle("active");
 
             document.body.classList.toggle("menu-open");
+
+            menuButton.setAttribute("aria-expanded", String(isOpen));
 
         });
 
@@ -36,6 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 document.body.classList.remove("menu-open");
 
+                menuButton.setAttribute("aria-expanded", "false");
+
             });
 
         });
@@ -48,7 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================== */
 
     const revealElements = document.querySelectorAll(
-        ".section-label, .about-content, .service, .project, .process-card, .cta"
+        ".section-label, .about-content, .service-card, .reason-card, " +
+        ".project-featured, .project-card, .process-card, .tech-card, " +
+        ".faq-item, .cta-inner"
     );
 
 
@@ -87,57 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
     revealElements.forEach(element => {
 
         revealObserver.observe(element);
-
-    });
-
-
-    /* =====================================
-       PROJECT IMAGE CURSOR EFFECT
-    ===================================== */
-
-    const projects =
-        document.querySelectorAll(".project");
-
-
-    projects.forEach(project => {
-
-        const viewButton =
-            project.querySelector(".project-view");
-
-
-        if (!viewButton) return;
-
-
-        project.addEventListener("mousemove", event => {
-
-            if (window.innerWidth <= 900) return;
-
-
-            const rect =
-                project.getBoundingClientRect();
-
-
-            const x =
-                event.clientX - rect.left;
-
-
-            const y =
-                event.clientY - rect.top;
-
-
-            viewButton.style.left =
-                `${x - 55}px`;
-
-
-            viewButton.style.top =
-                `${y - 55}px`;
-
-
-            viewButton.style.right = "auto";
-
-            viewButton.style.bottom = "auto";
-
-        });
 
     });
 
@@ -220,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const interactiveElements =
         document.querySelectorAll(
-            "a, button, .service, .project"
+            "a, button, .service-card, .project-card, .reason-card, .tech-card"
         );
 
 
@@ -247,28 +202,125 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================
-       PARALLAX HERO
+       HERO FADE-IN
     ===================================== */
 
-    const heroImage =
-        document.querySelector(".hero-image img");
+    const loader = document.querySelector(".loader");
+    const hero = document.querySelector(".hero");
 
+    if (hero) {
 
-    window.addEventListener("scroll", () => {
+        if (loader) {
 
-        if (!heroImage) return;
+            loader.addEventListener(
+                "animationend",
+                () => hero.classList.add("hero-in"),
+                { once: true }
+            );
 
+        } else {
 
-        const scroll =
-            window.scrollY;
-
-
-        if (scroll < window.innerHeight) {
-
-            heroImage.style.transform =
-                `scale(1.02) translateY(${scroll * 0.08}px)`;
+            hero.classList.add("hero-in");
 
         }
+
+    }
+
+
+    /* =====================================
+       HERO CTAs
+    ===================================== */
+
+    const heroPortfolioBtn =
+        document.getElementById("heroPortfolioBtn");
+
+    const heroWhatsappBtn =
+        document.getElementById("heroWhatsappBtn");
+
+    if (heroPortfolioBtn) {
+
+        heroPortfolioBtn.addEventListener("click", () => {
+
+            document
+                .getElementById("portfolio")
+                ?.scrollIntoView({ behavior: "smooth" });
+
+        });
+
+    }
+
+    if (heroWhatsappBtn) {
+
+        heroWhatsappBtn.addEventListener("click", () => {
+
+            window.open(
+                "https://wa.me/5490000000000",
+                "_blank"
+            );
+
+        });
+
+    }
+
+
+    /* =====================================
+       SCROLL TO CONTACT (about + services CTAs)
+    ===================================== */
+
+    const scrollToContactButtons =
+        document.querySelectorAll(".js-scroll-contact, #aboutContactBtn");
+
+    scrollToContactButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            document
+                .getElementById("contacto")
+                ?.scrollIntoView({ behavior: "smooth" });
+
+        });
+
+    });
+
+
+    /* =====================================
+       FAQ ACCORDION
+    ===================================== */
+
+    const faqItems =
+        document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+
+        const question =
+            item.querySelector(".faq-question");
+
+        if (!question) return;
+
+        question.addEventListener("click", () => {
+
+            const isOpen =
+                item.classList.contains("open");
+
+            faqItems.forEach(other => {
+
+                other.classList.remove("open");
+
+                other
+                    .querySelector(".faq-question")
+                    ?.setAttribute("aria-expanded", "false");
+
+            });
+
+            if (!isOpen) {
+
+                item.classList.add("open");
+
+                question.setAttribute("aria-expanded", "true");
+
+            }
+
+        });
 
     });
 

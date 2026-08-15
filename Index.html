@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
 
@@ -54,7 +54,7 @@
         Hablemos <span>↗</span>
     </a>
 
-    <button class="menu-button" id="menuButton">
+    <button class="menu-button" id="menuButton" aria-label="Abrir menú" aria-expanded="false">
         <span></span>
         <span></span>
     </button>
@@ -92,56 +92,28 @@
 
 <section class="hero">
 
-    <div class="hero-top">
+    <div class="hero-inner">
 
-        <div class="hero-tag">
-            <span class="dot"></span>
-            Diseño & Desarrollo Web
-        </div>
+        <div class="hero-decor-line" aria-hidden="true"></div>
 
-        <div class="hero-number">
-            01 / 05
-        </div>
-
-    </div>
-
-
-    <div class="hero-title">
-
-        <h1>
-            Websites
-            <span>that</span>
-            <em>matter.</em>
+        <h1 class="hero-heading">
+            Websites que transforman negocios.
         </h1>
 
-        <div class="hero-side-text">
-            Creo experiencias digitales
-            que hacen que una marca
-            se vea y se sienta diferente.
-        </div>
+        <p class="hero-subheading">
+            No hago sitios bonitos. Hago sitios que venden, que conectan,
+            que crecen. Diseño + desarrollo + estrategia en cada pixel.
+        </p>
 
-    </div>
+        <div class="hero-cta">
 
+            <button type="button" class="btn btn-primary" id="heroPortfolioBtn">
+                Ver portafolio
+            </button>
 
-    <div class="hero-bottom">
-
-        <a href="#portfolio" class="circle-link">
-            <span>Ver<br>proyectos</span>
-            <strong>↓</strong>
-        </a>
-
-        <div class="hero-image">
-
-            <img
-                src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1400&q=85"
-                alt="Diseño creativo"
-            >
-
-            <div class="image-label">
-                <span>CREATIVE</span>
-                <span>DIGITAL</span>
-                <span>WEB</span>
-            </div>
+            <button type="button" class="btn btn-secondary" id="heroWhatsappBtn">
+                Hablar por WhatsApp
+            </button>
 
         </div>
 
@@ -186,46 +158,66 @@
 ========================= -->
 
 <section class="about section" id="sobre-mi">
+    <div class="container">
 
-    <div class="section-label">
-        <span>02</span>
-        SOBRE MÍ
-    </div>
+        <div class="section-label">
+            <span>02</span>
+            SOBRE MÍ
+        </div>
 
-    <div class="about-content">
+        <div class="about-content">
 
-        <div class="about-heading">
+            <div class="about-text">
 
-            <h2>
-                No creo páginas.
-                <span>Creo presencia.</span>
-            </h2>
+                <h2 class="h2">
+                    No creo páginas.
+                    <span class="accent-text">Creo presencia.</span>
+                </h2>
+
+                <p class="body-large">
+                    Soy diseñadora y desarrolladora web enfocada
+                    en crear sitios que combinan estrategia,
+                    diseño y tecnología.
+                </p>
+
+                <p class="body-regular">
+                    Cada proyecto empieza con una idea y termina
+                    convirtiéndose en una experiencia digital
+                    pensada para conectar con personas reales.
+                </p>
+
+                <ul class="about-points">
+
+                    <li>
+                        <span class="check" aria-hidden="true">✓</span>
+                        Diseño a medida, no plantillas genéricas
+                    </li>
+
+                    <li>
+                        <span class="check" aria-hidden="true">✓</span>
+                        Código limpio, rápido y responsive
+                    </li>
+
+                    <li>
+                        <span class="check" aria-hidden="true">✓</span>
+                        Acompañamiento de principio a fin
+                    </li>
+
+                </ul>
+
+                <button type="button" class="btn btn-tertiary" id="aboutContactBtn">
+                    Hablemos de tu proyecto <span>↗</span>
+                </button>
+
+            </div>
+
+            <div class="about-visual" aria-hidden="true">
+                <div class="about-visual-mark">BD<span>.</span></div>
+            </div>
 
         </div>
 
-
-        <div class="about-text">
-
-            <p class="large">
-                Soy diseñadora y desarrolladora web enfocada
-                en crear sitios que combinan estrategia,
-                diseño y tecnología.
-            </p>
-
-            <p>
-                Cada proyecto empieza con una idea y termina
-                convirtiéndose en una experiencia digital
-                pensada para conectar con personas reales.
-            </p>
-
-            <a href="#contacto" class="text-link">
-                Conocer más sobre mí <span>↗</span>
-            </a>
-
-        </div>
-
     </div>
-
 </section>
 
 
@@ -234,115 +226,181 @@
 ========================= -->
 
 <section class="services section" id="servicios">
+    <div class="container">
 
-    <div class="section-label light">
-        <span>03</span>
-        SERVICIOS
+        <div class="section-label light">
+            <span>03</span>
+            SERVICIOS
+        </div>
+
+        <div class="services-heading">
+            <h2 class="h2 on-dark">
+                ¿Qué podemos crear
+                <span class="accent-text">para tu negocio?</span>
+            </h2>
+            <p class="body-large on-dark-muted">
+                Soluciones digitales pensadas para negocios que quieren crecer.
+            </p>
+        </div>
+
+        <div class="services-grid">
+
+            <article class="service-card">
+
+                <div class="service-number">01</div>
+
+                <h3 class="h3 on-dark">Diseño Web</h3>
+
+                <p class="body-regular on-dark-muted">
+                    Diseños modernos, estratégicos y
+                    adaptados a la identidad de cada marca.
+                </p>
+
+                <ul class="service-features">
+                    <li>Identidad visual coherente</li>
+                    <li>Wireframes y prototipos</li>
+                    <li>Diseño mobile-first</li>
+                </ul>
+
+                <button type="button" class="btn btn-tertiary on-dark js-scroll-contact">
+                    Descubrir servicio <span>↗</span>
+                </button>
+
+            </article>
+
+            <article class="service-card">
+
+                <div class="service-number">02</div>
+
+                <h3 class="h3 on-dark">Desarrollo</h3>
+
+                <p class="body-regular on-dark-muted">
+                    Desarrollo responsive utilizando
+                    HTML, CSS y JavaScript.
+                </p>
+
+                <ul class="service-features">
+                    <li>Código limpio y optimizado</li>
+                    <li>Compatible con todos los navegadores</li>
+                    <li>Rendimiento cuidado</li>
+                </ul>
+
+                <button type="button" class="btn btn-tertiary on-dark js-scroll-contact">
+                    Descubrir servicio <span>↗</span>
+                </button>
+
+            </article>
+
+            <article class="service-card">
+
+                <div class="service-number">03</div>
+
+                <h3 class="h3 on-dark">Landing Pages</h3>
+
+                <p class="body-regular on-dark-muted">
+                    Páginas enfocadas en presentar,
+                    comunicar y convertir.
+                </p>
+
+                <ul class="service-features">
+                    <li>Estructura orientada a conversión</li>
+                    <li>Copy claro y directo</li>
+                    <li>Integración con WhatsApp y formularios</li>
+                </ul>
+
+                <button type="button" class="btn btn-tertiary on-dark js-scroll-contact">
+                    Descubrir servicio <span>↗</span>
+                </button>
+
+            </article>
+
+            <article class="service-card">
+
+                <div class="service-number">04</div>
+
+                <h3 class="h3 on-dark">E-commerce</h3>
+
+                <p class="body-regular on-dark-muted">
+                    Experiencias de compra simples,
+                    atractivas y pensadas para vender.
+                </p>
+
+                <ul class="service-features">
+                    <li>Catálogo de productos</li>
+                    <li>Checkout simple</li>
+                    <li>Diseño enfocado en ventas</li>
+                </ul>
+
+                <button type="button" class="btn btn-tertiary on-dark js-scroll-contact">
+                    Descubrir servicio <span>↗</span>
+                </button>
+
+            </article>
+
+        </div>
+
     </div>
+</section>
 
 
-    <div class="services-heading">
+<!-- =========================
+     WHY BD
+========================= -->
 
-        <h2>
-            Ideas que
-            <i>se convierten</i>
-            en digital.
-        </h2>
+<section class="why section">
+    <div class="container">
 
-    </div>
+        <div class="section-label">
+            <span>04</span>
+            POR QUÉ BD
+        </div>
 
+        <div class="why-heading">
+            <h2 class="h2">¿Por qué Blunig-Digital?</h2>
+            <p class="body-large">Cuatro razones para trabajar juntos.</p>
+        </div>
 
-    <div class="services-list">
+        <div class="why-grid">
 
-        <article class="service">
+            <article class="reason-card">
+                <span class="reason-mark" aria-hidden="true">✳</span>
+                <h3 class="h4">Diseño con propósito</h3>
+                <p class="body-regular">
+                    Cada decisión visual responde a un objetivo:
+                    comunicar, conectar o vender.
+                </p>
+            </article>
 
-            <div class="service-number">
-                01
-            </div>
+            <article class="reason-card">
+                <span class="reason-mark" aria-hidden="true">✳</span>
+                <h3 class="h4">Comunicación directa</h3>
+                <p class="body-regular">
+                    Hablamos por WhatsApp, sin intermediarios
+                    ni procesos complicados.
+                </p>
+            </article>
 
-            <div class="service-name">
-                Diseño Web
-            </div>
+            <article class="reason-card">
+                <span class="reason-mark" aria-hidden="true">✳</span>
+                <h3 class="h4">Código propio, sin plantillas</h3>
+                <p class="body-regular">
+                    Cada sitio se construye a medida,
+                    pensado para tu marca.
+                </p>
+            </article>
 
-            <div class="service-description">
-                Diseños modernos, estratégicos y
-                adaptados a la identidad de cada marca.
-            </div>
+            <article class="reason-card">
+                <span class="reason-mark" aria-hidden="true">✳</span>
+                <h3 class="h4">Acompañamiento real</h3>
+                <p class="body-regular">
+                    Estoy presente en cada etapa, desde
+                    la idea hasta la publicación.
+                </p>
+            </article>
 
-            <div class="service-arrow">
-                ↗
-            </div>
-
-        </article>
-
-
-        <article class="service">
-
-            <div class="service-number">
-                02
-            </div>
-
-            <div class="service-name">
-                Desarrollo
-            </div>
-
-            <div class="service-description">
-                Desarrollo responsive utilizando
-                HTML, CSS y JavaScript.
-            </div>
-
-            <div class="service-arrow">
-                ↗
-            </div>
-
-        </article>
-
-
-        <article class="service">
-
-            <div class="service-number">
-                03
-            </div>
-
-            <div class="service-name">
-                Landing Pages
-            </div>
-
-            <div class="service-description">
-                Páginas enfocadas en presentar,
-                comunicar y convertir.
-            </div>
-
-            <div class="service-arrow">
-                ↗
-            </div>
-
-        </article>
-
-
-        <article class="service">
-
-            <div class="service-number">
-                04
-            </div>
-
-            <div class="service-name">
-                E-commerce
-            </div>
-
-            <div class="service-description">
-                Experiencias de compra simples,
-                atractivas y pensadas para vender.
-            </div>
-
-            <div class="service-arrow">
-                ↗
-            </div>
-
-        </article>
+        </div>
 
     </div>
-
 </section>
 
 
@@ -351,151 +409,114 @@
 ========================= -->
 
 <section class="work section" id="portfolio">
+    <div class="container">
 
-    <div class="section-label">
-        <span>04</span>
-        PROYECTOS
+        <div class="section-label">
+            <span>05</span>
+            PROYECTOS
+        </div>
+
+        <div class="work-header">
+
+            <h2 class="h2">
+                Proyectos que
+                <span class="accent-text">hablan por nosotros.</span>
+            </h2>
+
+            <p class="body-large">
+                Una selección de proyectos donde
+                diseño, estrategia y desarrollo
+                trabajan juntos.
+            </p>
+
+        </div>
+
+
+        <!-- FEATURED PROJECT -->
+
+        <article class="project-featured">
+
+            <div class="project-featured-image">
+                <img
+                    src="asset/1.jpg"
+                    alt="Landing page de Rosa Beauty, un espacio de estética y belleza"
+                >
+            </div>
+
+            <div class="project-featured-content">
+
+                <span class="project-tag">PROYECTO REAL</span>
+
+                <h3 class="h3">Rosa Beauty</h3>
+
+                <p class="body-regular">
+                    Landing page para un espacio
+                    especializado en estética y belleza.
+                </p>
+
+                <p class="project-scope-label">Mi trabajo:</p>
+
+                <ul class="project-scope">
+                    <li>Diseño de la landing page</li>
+                    <li>Desarrollo responsive</li>
+                    <li>Optimización de la experiencia mobile</li>
+                </ul>
+
+                <a
+                    href="https://rosabeautyestetica-c1e04.web.app/"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-primary"
+                >
+                    Ver caso completo <span>↗</span>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT GRID -->
+
+        <div class="project-grid">
+
+            <a href="#" class="project-card">
+
+                <div class="project-card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=80"
+                        alt="Proyecto de identidad digital para la marca de moda City Girl"
+                    >
+                </div>
+
+                <div class="project-card-overlay">
+                    <span class="project-category">BRAND / WEBSITE</span>
+                    <span class="project-card-title">City Girl</span>
+                    <span class="project-card-link">Ver proyecto ↗</span>
+                </div>
+
+            </a>
+
+            <a href="#" class="project-card">
+
+                <div class="project-card-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?auto=format&fit=crop&w=1200&q=80"
+                        alt="Concepto visual digital para la marca GLEA Studio"
+                    >
+                </div>
+
+                <div class="project-card-overlay">
+                    <span class="project-category">CONCEPT / DIGITAL</span>
+                    <span class="project-card-title">GLEA Studio</span>
+                    <span class="project-card-link">Ver proyecto ↗</span>
+                </div>
+
+            </a>
+
+        </div>
+
     </div>
-
-
-    <div class="work-header">
-
-        <h2>
-            Selected
-            <span>work.</span>
-        </h2>
-
-        <p>
-            Una selección de proyectos donde
-            diseño, estrategia y desarrollo
-            trabajan juntos.
-        </p>
-
-    </div>
-
-
-    <!-- PROJECT 1 -->
-
-    <article class="project project-large">
-
-        <div class="project-image">
-
-            <img
-                src="asset/1.jpg"
-                alt="Proyecto ecommerce"
-            >
-
-            <a href="https://rosabeautyestetica-c1e04.web.app/"
-               target="_blank"
-               class="project-view">
-                Ver proyecto <span>↗</span>
-            </a>
-
-        </div>
-
-        <div class="project-info">
-
-            <div>
-                <span class="project-category">
-                    WEB DESIGN / BEAUTY
-                </span>
-
-                <h3>
-                    Rosa Beauty
-                </h3>
-            </div>
-
-            <p>
-                Landing page para un espacio
-                especializado en estética y belleza.
-            </p>
-
-        </div>
-
-    </article>
-
-
-    <!-- PROJECT 2 -->
-
-    <article class="project project-reverse">
-
-        <div class="project-image">
-
-            <img
-                src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1600&q=85"
-                alt="Proyecto web creativo"
-            >
-
-            <a href="#" class="project-view">
-                Ver proyecto <span>↗</span>
-            </a>
-
-        </div>
-
-        <div class="project-info">
-
-            <div>
-
-                <span class="project-category">
-                    BRAND / WEBSITE
-                </span>
-
-                <h3>
-                    City Girl
-                </h3>
-
-            </div>
-
-            <p>
-                Identidad digital y experiencia
-                web para una marca de moda.
-            </p>
-
-        </div>
-
-    </article>
-
-
-    <!-- PROJECT 3 -->
-
-    <article class="project">
-
-        <div class="project-image">
-
-            <img
-                src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?auto=format&fit=crop&w=1600&q=85"
-                alt="Proyecto digital"
-            >
-
-            <a href="#" class="project-view">
-                Ver proyecto <span>↗</span>
-            </a>
-
-        </div>
-
-        <div class="project-info">
-
-            <div>
-
-                <span class="project-category">
-                    CONCEPT / DIGITAL
-                </span>
-
-                <h3>
-                    GLEA Studio
-                </h3>
-
-            </div>
-
-            <p>
-                Concepto visual para una marca
-                con una identidad urbana y elegante.
-            </p>
-
-        </div>
-
-    </article>
-
 </section>
 
 
@@ -504,90 +525,201 @@
 ========================= -->
 
 <section class="process section">
+    <div class="container">
 
-    <div class="section-label">
-        <span>05</span>
-        PROCESO
-    </div>
-
-
-    <div class="process-heading">
-
-        <h2>
-            From idea
-            <span>to impact.</span>
-        </h2>
-
-    </div>
-
-
-    <div class="process-grid">
-
-        <div class="process-card">
-
-            <span>01</span>
-
-            <h3>
-                Discover
-            </h3>
-
-            <p>
-                Entiendo tu marca, tus objetivos
-                y las personas a las que quieres llegar.
-            </p>
-
+        <div class="section-label">
+            <span>06</span>
+            PROCESO
         </div>
 
-
-        <div class="process-card">
-
-            <span>02</span>
-
-            <h3>
-                Design
-            </h3>
-
-            <p>
-                Transformo la estrategia en una
-                experiencia visual clara y atractiva.
-            </p>
-
+        <div class="process-heading">
+            <h2 class="h2">Del primer mensaje a tu web publicada.</h2>
+            <p class="body-large">Un proceso simple, sin vueltas innecesarias.</p>
         </div>
 
+        <div class="process-grid">
 
-        <div class="process-card">
+            <div class="process-card">
+                <span class="process-number">01</span>
+                <h3 class="h4">Discover</h3>
+                <p class="body-regular">
+                    Entiendo tu marca, tus objetivos
+                    y las personas a las que quieres llegar.
+                </p>
+            </div>
 
-            <span>03</span>
+            <div class="process-card">
+                <span class="process-number">02</span>
+                <h3 class="h4">Design</h3>
+                <p class="body-regular">
+                    Transformo la estrategia en una
+                    experiencia visual clara y atractiva.
+                </p>
+            </div>
 
-            <h3>
-                Build
-            </h3>
+            <div class="process-card">
+                <span class="process-number">03</span>
+                <h3 class="h4">Build</h3>
+                <p class="body-regular">
+                    Desarrollo el sitio cuidando
+                    rendimiento, responsive y detalles.
+                </p>
+            </div>
 
-            <p>
-                Desarrollo el sitio cuidando
-                rendimiento, responsive y detalles.
-            </p>
-
-        </div>
-
-
-        <div class="process-card">
-
-            <span>04</span>
-
-            <h3>
-                Launch
-            </h3>
-
-            <p>
-                Publicamos el proyecto y dejamos
-                todo listo para comenzar.
-            </p>
+            <div class="process-card">
+                <span class="process-number">04</span>
+                <h3 class="h4">Launch</h3>
+                <p class="body-regular">
+                    Publicamos el proyecto y dejamos
+                    todo listo para comenzar.
+                </p>
+            </div>
 
         </div>
 
     </div>
+</section>
 
+
+<!-- =========================
+     TECH STACK
+========================= -->
+
+<section class="tech section">
+    <div class="container">
+
+        <div class="section-label">
+            <span>07</span>
+            TECNOLOGÍAS
+        </div>
+
+        <div class="tech-heading">
+            <h2 class="h2">Herramientas con las que trabajo.</h2>
+        </div>
+
+        <div class="tech-grid">
+
+            <div class="tech-card">
+                <h3 class="h4">Frontend</h3>
+                <p class="body-regular">HTML5 · CSS3 · JavaScript</p>
+            </div>
+
+            <div class="tech-card">
+                <h3 class="h4">Diseño</h3>
+                <p class="body-regular">Figma</p>
+            </div>
+
+            <div class="tech-card">
+                <h3 class="h4">Flujo de trabajo</h3>
+                <p class="body-regular">Git · GitHub</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="faq section">
+    <div class="container">
+
+        <div class="section-label">
+            <span>08</span>
+            FAQ
+        </div>
+
+        <div class="faq-heading">
+            <h2 class="h2">Preguntas frecuentes.</h2>
+        </div>
+
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">
+                    <span>¿Cuánto tiempo toma un proyecto?</span>
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap">
+                    <div class="faq-answer">
+                        <p class="body-regular">
+                            Depende del alcance del proyecto. Lo conversamos
+                            juntos al inicio y te doy un tiempo estimado
+                            antes de empezar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">
+                    <span>¿Cómo es el proceso de trabajo?</span>
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap">
+                    <div class="faq-answer">
+                        <p class="body-regular">
+                            Empezamos con una charla para entender tu marca
+                            y tus objetivos. Después viene el diseño, el
+                            desarrollo y por último la publicación. Podés
+                            ver el detalle en la sección Proceso.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">
+                    <span>¿Ofreces hosting y dominio?</span>
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap">
+                    <div class="faq-answer">
+                        <p class="body-regular">
+                            Puedo orientarte en la elección de hosting y
+                            dominio, y acompañarte en la publicación del sitio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">
+                    <span>¿Hacés ajustes después de la entrega?</span>
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap">
+                    <div class="faq-answer">
+                        <p class="body-regular">
+                            Sí, podemos conversar sobre un plan de
+                            mantenimiento o ajustes puntuales según lo
+                            que necesites.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button type="button" class="faq-question" aria-expanded="false">
+                    <span>¿Cómo empezamos?</span>
+                    <span class="faq-icon" aria-hidden="true">+</span>
+                </button>
+                <div class="faq-answer-wrap">
+                    <div class="faq-answer">
+                        <p class="body-regular">
+                            Escribime por WhatsApp contándome tu idea y
+                            coordinamos los próximos pasos juntos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 </section>
 
 
@@ -596,26 +728,32 @@
 ========================= -->
 
 <section class="cta" id="contacto">
+    <div class="container cta-inner">
 
-    <div class="cta-small">
-        ¿Tienes una idea?
+        <div class="cta-small">
+            ¿Tienes un proyecto?
+        </div>
+
+        <h2 class="h1-cta">
+            Cuéntame tu idea,<br>
+            hagámosla realidad.
+        </h2>
+
+        <p class="body-large cta-subheading">
+            Yo me encargo de convertirla en una experiencia
+            web que represente tu marca.
+        </p>
+
+        <a
+            href="https://wa.me/5490000000000"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-primary btn-lg"
+        >
+            Cuéntame tu proyecto <span>↗</span>
+        </a>
+
     </div>
-
-    <h2>
-        Let's make
-        <span>something</span>
-        happen.
-    </h2>
-
-    <a
-        href="https://wa.me/5490000000000"
-        target="_blank"
-        class="cta-button"
-    >
-        Hablemos por WhatsApp
-        <span>↗</span>
-    </a>
-
 </section>
 
 
@@ -624,40 +762,47 @@
 ========================= -->
 
 <footer class="footer">
+    <div class="container">
 
-    <div class="footer-top">
+        <div class="footer-grid">
 
-        <div class="footer-brand">
-            BD<span>.</span>
+            <div class="footer-brand-col">
+                <div class="footer-brand">
+                    BD<span>.</span>
+                </div>
+                <p class="body-regular on-dark-muted">
+                    Diseño digital con intención.
+                </p>
+                <div class="footer-social">
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Behance</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="h4 on-dark">Navegación</h4>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="h4 on-dark">Contacto</h4>
+                <a href="https://wa.me/5490000000000" target="_blank" rel="noopener">
+                    Hablar por WhatsApp
+                </a>
+                <span class="body-regular on-dark-muted">Buenos Aires, Argentina</span>
+            </div>
+
         </div>
 
-        <p>
-            Diseño digital con intención.
-        </p>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <span>
-            © 2026 BD Blunig-Digital
-        </span>
-
-        <div class="footer-links">
-
-            <a href="#">Instagram</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Behance</a>
-
+        <div class="footer-bottom">
+            <span>© 2026 BD Blunig-Digital</span>
         </div>
 
-        <span>
-            Buenos Aires, Argentina
-        </span>
-
     </div>
-
 </footer>
 
 </main>
